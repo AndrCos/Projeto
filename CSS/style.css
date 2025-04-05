@@ -8,15 +8,17 @@ body {
   font-size: 18px;
   background-color: gray;
   background-image: url(/imagens/fundo.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 }
 
 .container {
   width: 80%;
   margin: auto;
 }
+
 
 .header {
   background-color: black;
@@ -55,17 +57,16 @@ body {
     }
   }
 }
+ 
+ p {
+  color: red;
+  text-align: center;
+ }
 
-.banner-mobile {
-  img {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    
-  }
-
-}
-
+ .fotos {
+  padding-top: 40px;
+ }
+ 
  @media (min-width: 1000px) {
     .header {
       .header-menu {
@@ -88,13 +89,28 @@ body {
 
       }
     }
-} 
- h1 {
-color: white; 
-padding: 20px;
-margin: 20px;
-text-align: center;
-padding-top: 150px;
-}
+    h1 {
+      color: #ccc; 
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      padding-top: 150px;
+    }
+    
+  } 
+ 
+  @media (max-width: 500px) {
+  h1 {
+    color: white; 
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    padding-top: 20px;
+    }
+  }
+
+
+
+
 
 
