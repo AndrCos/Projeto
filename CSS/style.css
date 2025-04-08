@@ -252,4 +252,59 @@ p {
   }
 }
 
+/* CONTATO */ 
+.contato {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contato-titulo {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contato-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+}
+
+.contato-form label {
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.contato-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.contato-form button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+}
+
+.contato-form button:hover {
+  background-color: darkred;
+}
+
+
 

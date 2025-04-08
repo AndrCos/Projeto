@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Contato</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" title="Home" class="header-logo">
+        <img src="imagens/Ragnarok.png" alt="Ragnarok">
+      </a>
+
+      <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="index.html" title="Home">Home</a>
+          </li>
+          <li>
+            <a href="sobre.html" title="Sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="galeria.html" title="Galeriadefotos">Galeria</a>
+          </li>
+          <li>
+            <a href="contato.html" title="Contato">Contato</a>
+          </li>
+          <li>
+            <a href="jogar.html" title="Jogar"> Jogar</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="contato">
+      <h2 class="contato-titulo">Fale Conosco</h2>
+      <form class="contato-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone">
+
+        <button type="button" id="botao">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p>Todos os Direitos Reservados. <strong>Por: Andrei.</strong></p>
+      <hr>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("botao").onclick = function () {
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var telefone = document.getElementById("telefone").value;
+
+      if (nome === "" && email === "" && telefone === "") {
+        alert("Por favor, preencha todos os campos.");
+      } else {
+        if (nome === "") {
+          alert("Informe o nome");
+        }
+
+        if (email === "") {
+          alert("Informe o email");
+        } else if (email.indexOf("@") === -1) {
+          alert("O email deve conter '@'");
+        }
+
+        if (telefone === "") {
+          alert("Informe o telefone");
+        } else if (isNaN(telefone)) {
+          alert("O telefone deve conter apenas números");
+        }
+
+        if (
+          nome !== "" &&
+          email !== "" &&
+          email.indexOf("@") !== -1 &&
+          telefone !== "" &&
+          !isNaN(telefone)
+        ) {
+          alert("Formulário enviado com sucesso!");
+        }
+      }
+    }
+  </script>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    function mostrarMenu() {
+      $(".header-nav").toggle();
+    }
+  </script>
+
+</body>
+
+</html>
