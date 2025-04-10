@@ -25,6 +25,10 @@
       <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
         <i class="fa-solid fa-bars"></i>
       </a>
+      <a href="javascript:alternarModoEscuro()" title="Modo Escuro" class="modo-escuro-btn">
+        <i class="fas fa-moon"></i>
+      </a>
+
       <nav class="header-nav">
         <ul>
           <li>
@@ -126,6 +130,23 @@
         document.querySelector(".header-nav").style.display = "";
       }
     });
+  </script>
+  <script>
+    // Verifica se já tem modo escuro salvo no localStorage
+    if (localStorage.getItem("modo-escuro") === "ativado") {
+      document.body.classList.add("dark-mode");
+    }
+
+    function alternarModoEscuro() {
+      document.body.classList.toggle("dark-mode");
+
+      // Salva a preferência no localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("modo-escuro", "ativado");
+      } else {
+        localStorage.setItem("modo-escuro", "desativado");
+      }
+    }
   </script>
 
 </body>

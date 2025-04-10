@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-  <title>Ragnarok</title>
+  <title>Sobre</title>
 </head>
 
 <body>
@@ -25,6 +25,10 @@
         <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
           <i class="fa-solid fa-bars"></i>
         </a>
+        <a href="javascript:alternarModoEscuro()" title="Modo Escuro" class="modo-escuro-btn">
+          <i class="fas fa-moon"></i>
+        </a>
+
         <nav class="header-nav">
           <ul>
             <li>
@@ -51,12 +55,14 @@
       <div class="container">
         <h1>SOBRE O PROJETO</h1>
         <div class="box-sobre">
-          <p>
-            Ragnarok conta a história de Einar, um viking que sobrevive após uma batalha contra Jörmungandr, a Serpente do Mundo. Depois de perder sua tripulação e naufragar em uma ilha esquecida, ele encontra o cemitério de guerreiros caídos e, começa a sua jornada.
-          </p>
-          <p>
-            Este projeto foi desenvolvido com o conhecimento adquirido no <i><b>1º período</b></i> do curso de <strong>TADS (Tecnologia em Análise e Desenvolvimento de Sistemas) </strong> do <strong style="color: blue;"><i> Centro Universitário Integrado</i></strong>, que proporcionou a base para a criação e desenvolvimento do jogo e toda a estrutura web, aplicando conceitos aprendidos e ampliando as habilidades técnicas e criativas no processo.
-          </p>
+          <div class="sobre-box">
+            <p>
+              Ragnarok conta a história de Einar, um viking que sobrevive após uma batalha contra Jörmungandr, a Serpente do Mundo. Depois de perder sua tripulação e naufragar em uma ilha esquecida, ele encontra o cemitério de guerreiros caídos e, começa a sua jornada.
+            </p>
+            <p>
+              Este projeto foi desenvolvido com o conhecimento adquirido no <i><b>1º período</b></i> do curso de <strong>TADS (Tecnologia em Análise e Desenvolvimento de Sistemas) </strong> do <strong style="color: blue;"><i> Centro Universitário Integrado</i></strong>, que proporcionou a base para a criação e desenvolvimento do jogo e toda a estrutura web, aplicando conceitos aprendidos e ampliando as habilidades técnicas e criativas no processo.
+            </p>
+          </div>
         </div>
         <h2 class="agradecimentos-titulo" data-aos="fade-up">Agradecimentos:</h2>
         <ul class="agradecimentos-lista" data-aos="fade-up" data-aos-delay="100">
@@ -97,6 +103,23 @@
   </script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    // Verifica se já tem modo escuro salvo no localStorage
+    if (localStorage.getItem("modo-escuro") === "ativado") {
+      document.body.classList.add("dark-mode");
+    }
+
+    function alternarModoEscuro() {
+      document.body.classList.toggle("dark-mode");
+
+      // Salva a preferência no localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("modo-escuro", "ativado");
+      } else {
+        localStorage.setItem("modo-escuro", "desativado");
+      }
+    }
   </script>
 </body>
 
