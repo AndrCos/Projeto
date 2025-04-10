@@ -484,7 +484,7 @@ p {
 
 .dark-mode .header,
 .dark-mode .footer {
-  background-color: #1e1e1e;
+  background-color: black;
 }
 
 .dark-mode .header-nav li a {
