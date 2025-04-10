@@ -6,7 +6,6 @@
 
 html, body {
   height: 100%;
-  
 }
 
 body {
@@ -15,8 +14,10 @@ body {
   font-family: Roboto, Arial;
   font-size: 18px;
   background-color: white;
-  
-  
+}
+
+h1, h2, h3 {
+  font-family: 'MedievalSharp', serif;
 }
 
 .container {
@@ -98,6 +99,9 @@ h1 {
   color: black;
   text-align: center;
   padding: 100px 20px 20px;
+  text-shadow:
+  1px 1px 0 #333,
+  2px 2px 0 #111;
 }
 
 p {
@@ -107,7 +111,6 @@ p {
   max-width: 900px;
   padding: 0 10px;
 }
-
 
 .elemento {
   box-shadow: 0 0 40px black;
@@ -119,6 +122,86 @@ p {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+  /* SOBRE */
+.sobre-projeto {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobre-projeto h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: black;
+  text-transform: uppercase;
+  padding-top: 25px;
+}
+
+.sobre-projeto p {
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.box-sobre {
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 960px;
+  border-radius: 15px;
+  
+  /* Efeito 3D com dupla sombra */
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2), 
+    0 0 10px rgba(0, 0, 0, 0.05) inset; 
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-sobre:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(0, 0, 0, 0.07) inset;
+}
+
+/* AGRADECIMENTOS */
+.agradecimentos-titulo {
+  font-size: 1.4em;
+  margin-top: 50px;
+  text-align: center;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.agradecimentos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.agradecimentos-lista li {
+  background-color: #eee;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.agradecimentos-lista li:hover {
+  transform: scale(1.05);
+  background-color: #ddd;
 }
 
 /* GALERIA */
@@ -227,8 +310,11 @@ p {
     display: none;
     width: 100%;
     flex-direction: column;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7); 
     margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 
   .header-nav ul {
@@ -238,7 +324,18 @@ p {
   }
 
   .header-nav li {
-    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-nav li a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header-nav li:last-child a {
+    border-bottom: none;
   }
 
   h1 {

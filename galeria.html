@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <title>Galeria</title>
 </head>
 
@@ -82,6 +83,11 @@
     function mostrarMenu() {
       $(".header-nav").toggle();
     }
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        document.querySelector(".header-nav").style.display = "";
+      }
+    });
   </script>
 
 </body>
