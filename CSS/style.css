@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -335,7 +335,7 @@ p {
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .header-menu {
     display: block;
     position: fixed;
@@ -512,5 +512,5 @@ p {
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.1) rotate(15deg);
 }
-
+ 
 
