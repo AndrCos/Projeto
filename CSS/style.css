@@ -141,22 +141,22 @@ p {
 
   /* SOBRE */
 .sobre-projeto {
-  padding: 60px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
 .sobre-projeto h1 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   color: black;
   text-transform: uppercase;
-  padding-top: 25px;
+  padding-top: 40px;
 }
 
 .sobre-projeto p {
   font-size: 1.2em;
   color: #333;
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 900px;
   padding: 0 10px;
 }
@@ -252,6 +252,7 @@ p {
 .galeria-titulo {
   text-align: center;
   font-size: 2.5em;
+  padding-top: 40px;
   color: white;
   margin: 20px 0 10px;
   font-weight: bold;
@@ -385,6 +386,10 @@ p {
     padding-top: 40px;
   }
 
+  .galeria-titulo {
+    padding: 15px;
+  }
+
   .modo-escuro-btn {
     display: none;
   }
@@ -392,7 +397,7 @@ p {
 
 @media (max-width: 430px) {
   main {
-    padding-top: 120px; /* para mobile */
+    padding-top: 120px; 
   }
 }
 
