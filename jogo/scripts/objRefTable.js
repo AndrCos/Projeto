@@ -95,7 +95,6 @@ self.C3_JsPropNameTable = [
 	{Inimigo: 0},
 	{Inimigo2: 0},
 	{PlanoDeFundoEmBlocos16: 0},
-	{Texto3: 0},
 	{sim: 0},
 	{no: 0},
 	{menu: 0},
@@ -116,7 +115,9 @@ self.C3_JsPropNameTable = [
 	{Fim: 0},
 	{PlanoDeFundoEmBlocos17: 0},
 	{Next: 0},
-	{hist: 0}
+	{hist: 0},
+	{PlanoDeFundoEmBlocos18: 0},
+	{Texto3: 0}
 ];
 
 self.InstanceType = {
@@ -152,7 +153,6 @@ self.InstanceType = {
 	Inimigo: class extends self.ISpriteInstance {},
 	Inimigo2: class extends self.ISpriteInstance {},
 	PlanoDeFundoEmBlocos16: class extends self.ITiledBackgroundInstance {},
-	Texto3: class extends self.ITextInstance {},
 	sim: class extends self.ITextInstance {},
 	no: class extends self.ITextInstance {},
 	menu: class extends self.ITiledBackgroundInstance {},
@@ -173,5 +173,7 @@ self.InstanceType = {
 	Fim: class extends self.ITextInstance {},
 	PlanoDeFundoEmBlocos17: class extends self.ITiledBackgroundInstance {},
 	Next: class extends self.ITextInstance {},
-	hist: class extends self.ITextInstance {}
+	hist: class extends self.ITextInstance {},
+	PlanoDeFundoEmBlocos18: class extends self.ITiledBackgroundInstance {},
+	Texto3: class extends self.ITextInstance {}
 }
