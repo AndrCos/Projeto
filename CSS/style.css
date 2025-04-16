@@ -536,5 +536,13 @@ iframe {
   margin: 0 auto;
 }
 
+.btnn {
+  background-color: red;
+  color: white; 
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
  
 
