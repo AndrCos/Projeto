@@ -51,11 +51,9 @@
   <main>
     <h1 class="jogo-tit">O JOGO</h1>
 
-    <iframe width="100%" height="480px" src="jogo/index.html"></iframe>
+    <iframe id="gameFrame" src="jogo/index.html"></iframe>
     <p>
-      <a href="jogo/index.html" target="_blank" class="btnn">
-        Abrir em uma nova janela
-      </a>
+      <button onclick="entrarFullscreen()" class="btnn">Tela cheia</button>
     </p>
   </main>
   <footer class="footer">
@@ -82,6 +80,22 @@
       }
     });
   </script>
+
+  <script>
+    function entrarFullscreen() {
+      const iframe = document.getElementById('gameFrame');
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen(); // verificação se o navegador suporta
+      } else if (iframe.mozRequestFullScreen) {
+        iframe.mozRequestFullScreen(); // mozila
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen(); // chrome, safari e opera
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen(); // ultimo caso, internet explorer e edge
+      }
+    }
+  </script>
+
   <script>
     // Verifica se já tem modo escuro salvo no localStorage
     if (localStorage.getItem("modo-escuro") === "ativado") {
